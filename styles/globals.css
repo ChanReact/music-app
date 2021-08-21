@@ -64,3 +64,13 @@ a {
 .header-links .link_active {
   color: #2b2a35;
 }
+
+
+.float_box svg {
+  
+  color : #e1701a;
+ 
+  height: 2em;
+  width: 2em;
+
+}
