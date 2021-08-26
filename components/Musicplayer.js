@@ -1,22 +1,23 @@
-import { VStack,Image,Text, Box, HStack } from "@chakra-ui/react"
+import { VStack,Image,Text, Box, HStack,Flex } from "@chakra-ui/react"
 
 
 const Musicplayer = () => {
     return (
-        <VStack mt={4} w="300px" h="400px" rounded="18px"  backgroundColor="#108690">
-           <Text>Music Player</Text>
+        <VStack paddingY={8} spacing={4} mt={4} w="300px" h="400px" rounded="18px"  backgroundColor="#108690">
+           <Text fontWeight="medium" color="white" fontSize="lg">Now Playing</Text>
            
-           <Image w="200px" src="/images/nature.jpg"/>
-           <Box>
-               <Text>The Adventure</Text>
-               <Text>Angles & Airwaves</Text>
-           </Box>
-           <HStack>
-               <Text>2:40</Text>
-               <Text>3:45</Text>
+           <Image rounded="xl" w="230px" h="130px" src="/images/nature.jpg"/>
+           <Flex flexDirection="column" alignItems="center" pt={4}>
+               <Text color="white">The Adventure</Text>
+               <Text color="gray.50">Angles & Airwaves</Text>
+           </Flex>
+           <HStack spacing={2} w="200px">
+               <Text color="gray.50">2:40</Text>
+               <Box w="180px" h=".3em" bg="rgba(255,0,0,0.1)"></Box>
+               <Text color="gray.50">3:45</Text>
            </HStack>
            <HStack>
-               
+
 
            </HStack>
 
