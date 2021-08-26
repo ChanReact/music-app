@@ -1,22 +1,49 @@
 import { Flex, Icon,Text,Link, Box, Spacer } from "@chakra-ui/react";
 import { AiOutlineEllipsis } from "react-icons/ai";
 import { BsDot } from "react-icons/bs";
-
+import { useState,useEffect } from "react";
 import {songData} from "../data"
 import Recentlyplayed from "./Recentlyplayed";
 import Songwidget from "./Songwidget";
 
+const headerStyle = {
+    zIndex:"10",
+    overflow:"hidden",
+    top:"0",
+    bgColor:"white",
+    flexDir:"row",
+    h:"70px",
+    w:"54%",
+    position:"fixed",
+    alignItems:"center",
+    justifyContent:"space-between"
+}
+
+const mainStyle = {
+    flexDir:"column", 
+    w:"55%",
+    h:"100vh",
+    alignItems:"center", 
+    paddingX:'10',
+    overflowY:"auto",
+    position:"relative",
+    zIndex:'0'
+}
+
 const Main = () => {
+
+    const [scroll, setScrolled] = useState(false)
+
+
+    const onScroll = ()=>{
+        const scrollY = window.scrollY
+        console.log(scrollY)
+    }
 
     return (
 
-        <Flex flexDir="column" 
-        w="55%" h="full" alignItems="center" 
-        paddingX={10}
-        overflowY="auto"
-        position="relative"
-        zIndex={0}
-       
+        <Flex onScroll={onScroll}  
+          {...mainStyle}
         css={{
             '&::-webkit-scrollbar': {
             width: '4px',
@@ -34,7 +61,7 @@ const Main = () => {
         }}>
             {/* Header */}
 
-            <Flex  zIndex={10}  overflow="hidden" top={0}  bgColor="white" flexDir="row" h="70px" w="54%"  position="fixed" alignItems="center" justifyContent="space-between">
+            <Flex {...headerStyle} boxShadow={scroll ? 'sm' : 'none'}>
 
                 <Flex flexDir="row"  className="header-links" w="100%" pl={6} >
                     <Link _hover={{color: '#2b2a35', textDecor: 'none'}} >
@@ -70,6 +97,7 @@ const Main = () => {
 
             {/* Recently Played */}
             <Recentlyplayed/>
+            
 
             </Flex>
 
