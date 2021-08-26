@@ -23,6 +23,12 @@ export const  songData = [
         title : "Yesterday",
         artist : "The Beatles"
     },
+    {
+        image : "/images/nature.jpg",
+        title : "Yesterday",
+        artist : "The Beatles"
+    },
+    
 
     ]
     },{
@@ -50,8 +56,15 @@ export const  songData = [
         title : "Yesterday",
         artist : "The Beatles"
     },
+    {
+        image : "/images/nature.jpg",
+        title : "Yesterday",
+        artist : "The Beatles"
+    },
+    
     ]
     },
+    
     ];
 
 

@@ -9,25 +9,29 @@ import Songwidget from "./Songwidget";
 const headerStyle = {
     zIndex:"10",
     overflow:"hidden",
+    paddingX:'10',
     top:"0",
     bgColor:"white",
     flexDir:"row",
     h:"70px",
-    w:"54%",
+    w:"65%",
     position:"fixed",
+    
     alignItems:"center",
     justifyContent:"space-between"
 }
 
 const mainStyle = {
     flexDir:"column", 
-    w:"55%",
+    w:"65%",
     h:"100vh",
     alignItems:"center", 
     paddingX:'10',
     overflowY:"auto",
     position:"relative",
-    zIndex:'0'
+    zIndex:'0',
+    borderRight:"2px",
+    borderRightColor: "#F0F3F9"
 }
 
 const Main = () => {

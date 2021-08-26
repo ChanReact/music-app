@@ -2,7 +2,8 @@ import { Flex } from '@chakra-ui/react'
 import Head from 'next/head'
 import Image from 'next/image'
 import Main from '../components/Main'
-import { Sidebar } from '../components/Sidebar'
+import { Sidebar} from '../components/Sidebar'
+import { Rightbar } from '../components/Rightbar'
 
 
 
@@ -14,6 +15,8 @@ export default function Home() {
     {/* Main */}
     <Main/>
 
+    {/* Rightbar */}
+     <Rightbar /> 
 
    </Flex>
       
