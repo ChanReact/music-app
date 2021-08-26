@@ -1,4 +1,23 @@
-import { VStack,Image,Text, Box, HStack,Flex } from "@chakra-ui/react"
+import { VStack,Image,Text, Box, HStack,Flex,Icon } from "@chakra-ui/react"
+import { BsFillPlayFill,
+    BsArrowRepeat,
+    BsSkipStartFill,
+    BsFillSkipEndFill,
+    BsShuffle
+    } from "react-icons/bs"
+
+export const Controls = ({icon,border=false}) =>{
+    return (
+    <Box    h="12" w="12">
+           
+    <Flex rounded={14} h="full" bg={border ? 'whiteAlpha.400' : null} flexDir="column" alignContent="center" alignItems="center" justifyContent="center">
+    <Icon color="white" h="4" w="4" as={icon} />
+    </Flex>
+   
+     </Box>
+
+    )
+}
 
 
 const Musicplayer = () => {
@@ -13,11 +32,16 @@ const Musicplayer = () => {
            </Flex>
            <HStack spacing={2} w="200px">
                <Text color="gray.50">2:40</Text>
-               <Box w="180px" h=".3em" bg="rgba(255,0,0,0.1)"></Box>
+               <Box w="180px" h=".3em" bg="whiteAlpha.400"></Box>
                <Text color="gray.50">3:45</Text>
            </HStack>
            <HStack>
-
+             <Controls icon={BsArrowRepeat}/>
+             <Controls  icon={BsSkipStartFill}/>
+             <Controls border={true} icon={BsFillPlayFill}/>
+             <Controls icon={BsFillSkipEndFill}/>
+             <Controls icon={BsShuffle}/> 
+         
 
            </HStack>
 

@@ -18,7 +18,7 @@ const Recentcard = () => {
      <Spacer/>
      <HStack spacing={5}>
      <Text>3:51</Text>
-     <Box  bgColor="white" border="1px solid #bdc7c9" rounded={10} h="10" w="10">
+      <Box  bgColor="white" border="1px solid #bdc7c9" rounded={10} h="10" w="10">
            
            <Flex h="full" flexDir="column" alignContent="center" alignItems="center" justifyContent="center">
            <Icon h="6" w="6" as={BsFillPlayFill} />
