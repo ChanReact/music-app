@@ -32,7 +32,11 @@ const Musicplayer = () => {
            </Flex>
            <HStack spacing={2} w="200px">
                <Text color="gray.50">2:40</Text>
-               <Box w="180px" h=".3em" bg="whiteAlpha.400"></Box>
+               <Box w="180px" h=".3em" bg="whiteAlpha.400" >
+                   <Box w="100px" h="100%" bg="white" position="relative">
+                       <Box border="4px solid white" mt="-5px" ml="-10px" w="14px" h="14px" position="absolute" right="0" bgColor="blackAlpha.700"  rounded="100%" zIndex="10"></Box>
+                   </Box>
+               </Box>
                <Text color="gray.50">3:45</Text>
            </HStack>
            <HStack>
