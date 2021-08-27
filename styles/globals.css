@@ -65,6 +65,10 @@ a {
   color: #2b2a35;
 }
 
+.header-links .dark-link_active {
+  color: whitesmoke;
+}
+
 
 .float_box svg {
   

@@ -1,4 +1,4 @@
-import { Flex, Icon,Text,Link } from "@chakra-ui/react"
+import { Flex, Icon,Text,Link, useColorMode } from "@chakra-ui/react"
 import { FiPlayCircle,
     FiHome,
     FiSearch,
@@ -12,6 +12,9 @@ import '../styles/Sidebar.module.css';
 
 
 export const Sidebar = () => {
+
+    const { colorMode, toggleColorMode } = useColorMode()
+
     return (
         <Flex 
         display={{base: 'none', sm:'block'}}
@@ -19,7 +22,8 @@ export const Sidebar = () => {
         flexDir="column"
         alignItems="center"
         borderRight="2px"
-        borderRightColor="#F0F3F9"
+        borderRightColor={colorMode === 'light' ? 'gray.100':'whiteAlpha.300'}
+       zIndex="90"
         pl={10}
         overflowY="auto"
             css={{
@@ -43,7 +47,7 @@ export const Sidebar = () => {
             mb={10}
             align="center"
             
-            color="#2B2A35"
+            color={colorMode === 'light' ? "#2B2A35" : 'white'}
             w="100%">
                 <Icon as={FiPlayCircle} fontWeight="bold" fontSize="2xl"/>
                 <Text fontWeight="bold" fontSize="2xl" ml={4}>Rungon</Text>

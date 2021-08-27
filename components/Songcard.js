@@ -1,9 +1,12 @@
-import { Flex,Image,Text,Box,Icon  } from "@chakra-ui/react"  
+import { Flex,Image,Text,Box,Icon,useColorMode  } from "@chakra-ui/react"  
 import { BsFillPlayFill } from "react-icons/bs";
 
 export const Songcard = ({image,title,artist}) => {
+
+    const { colorMode, toggleColorMode } = useColorMode()
+
     return (
-       <Flex boxShadow="md" border="1px solid #EEEEEE" rounded={12} p={3} position="relative" flexDir="column" w="180px" h="210px" alignItems="center">
+       <Flex boxShadow="md" border="1px" borderColor="whiteAlpha.300" rounded={12} p={3} position="relative" flexDir="column" w="180px" h="210px" alignItems="center">
            <Image
            boxShadow="md"
             src={image}
@@ -19,7 +22,7 @@ export const Songcard = ({image,title,artist}) => {
               
            </Box>
         <Flex p={2} w="full" flexDir="column" justifyContent="center">
-        <Text fontSize="sm" color="#2b2a35" fontWeight="bold">{title}</Text>
+        <Text fontSize="sm" color={colorMode === 'light' ? "#2b2a35" : 'white'} fontWeight="bold">{title}</Text>
            <Text fontSize="xs" color="#bdc7c9" fontWeight="bold">{artist}</Text>
 
         </Flex>

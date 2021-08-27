@@ -1,10 +1,8 @@
-import { Flex,Text,Link,Icon,Box, Spacer } from "@chakra-ui/react"
+import { Flex,Text,Link,Icon,Box, Spacer, useColorMode, useColorModeValue } from "@chakra-ui/react"
 import { BsDot } from "react-icons/bs";
 
 const headerStyle = {
-   
-   
-    bgColor:"white",
+
     flexDirection:"row",
     h:"70px",
     w:"full",
@@ -15,13 +13,17 @@ const headerStyle = {
 }
 
 const Header = ({title}) => {
+
+    const { colorMode, toggleColorMode } = useColorMode()
+   
+
     return (
         
 <Flex {...headerStyle} >
 
 <Flex flexDir="row"  className="header-links" w="100%" pl={6} >
     <Link _hover={{color: '#2b2a35', textDecor: 'none'}} >
-        <Text className="link_active">{title}</Text>
+        <Text className={colorMode === 'light' ? "link_active":'dark-link_active'}>{title}</Text>
     </Link>
     
     

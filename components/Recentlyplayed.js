@@ -1,4 +1,4 @@
-import { Flex,Text,Spacer,Image, Box,Icon, HStack } from "@chakra-ui/react"
+import { Flex,Text,Spacer,Image, Box,Icon, HStack,useColorModeValue } from "@chakra-ui/react"
 import nature from '../public/images/nature.jpg'
 import { BsFillPlayFill } from "react-icons/bs"
 import { MdAddBox } from "react-icons/md";
@@ -21,8 +21,10 @@ const card_style = {
 }
 
 export const Recentcard = ({num,image,title,artist,duration}) => {
+
+    
     return (
-        <Flex {...card_style}>
+        <Flex {...card_style} >
         {/* Music Card */}
         
     <HStack spacing="6">
@@ -60,8 +62,9 @@ export const Recentcard = ({num,image,title,artist,duration}) => {
 
 
 const Recentlyplayed = () => {
+    const color = useColorModeValue("white", "whiteAlpha.300")
     return (
-        <Flex flexDir="column" boxShadow="md" w="full" mb={4} border="1px solid #EEEEEE" rounded={8} p={2}>
+        <Flex flexDir="column" boxShadow="md" w="full" mb={4} border="1px" borderColor={color} rounded={8} p={2}>
         <Flex flexDir="row" w="full" p={4} alignItems="center" justifyContent="space-between">
             <Text fontSize="md" fontWeight="bold">Recently Played</Text>
             <Spacer/>

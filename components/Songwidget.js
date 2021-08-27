@@ -1,9 +1,14 @@
-import { Flex,Text,Spacer } from "@chakra-ui/layout"
+import { Flex,Text,Spacer,useColorModeValue } from "@chakra-ui/react"
 import { Songcard } from "./Songcard"
 
 const Songwidget = ({title, songs}) => {
+
+   
+
+    const color = useColorModeValue("white", "whiteAlpha.300")
+
     return (
-        <Flex flexDir="column" boxShadow="md" w="full" mb={4} border="1px solid #EEEEEE" rounded={8} p={2}>
+        <Flex flexDir="column" boxShadow="md" w="full" mb={4} border="1px" borderColor={color} rounded={8} p={2}>
         <Flex flexDir="row" w="full" p={4} alignItems="center" justifyContent="space-between">
             <Text fontSize="md" fontWeight="bold">{title}</Text>
             <Spacer/>
